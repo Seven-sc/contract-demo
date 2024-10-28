@@ -2,3 +2,4 @@
 /artifacts/
 /.states/
 /*/artifacts/
+*.json
