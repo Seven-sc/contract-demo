@@ -37,7 +37,7 @@ contract contractStructure {
     }
 
     function pureTest() public pure returns (uint256){
-        uint256 x = 300;
+        uint256 x = 400;
         uint256 y = 200;
         return x + y;
     }
