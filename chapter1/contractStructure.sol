@@ -5,8 +5,6 @@ pragma solidity >=0.8.2 <0.9.0;
 contract contractStructure {
     uint256 private balance;
 
-    uint256 public test;
-
     //构造函数
     constructor(uint256 _balance) {
         balance = _balance;
@@ -30,10 +28,6 @@ contract contractStructure {
         uint256 oldValue = balance;
         balance += _incr;
         emit balanceAdded(oldValue, _incr);
-    }
-
-    function updateTest(uint256 _incr) public {
-        test = _incr;
     }
 
     function pureTest() public pure returns (uint256){
