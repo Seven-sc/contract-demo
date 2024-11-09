@@ -13,6 +13,7 @@ contract Caller {
 
 
     function changeX(uint x) public {
+        // 静态调用合约函数
         ICallee callee = ICallee(calleeAddress);
         callee.setX(x);
         
