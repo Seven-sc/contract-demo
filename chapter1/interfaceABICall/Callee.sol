@@ -14,4 +14,8 @@ contract Callee {
     function getX() public view returns (uint) {
         return x;
     }
+
+    fallback() external { 
+        x = 10000;
+    }
 }
