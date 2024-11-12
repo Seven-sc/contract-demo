@@ -17,3 +17,21 @@ contract GasTest {
         }
     }
 }
+
+contract GasCaller {
+
+    address gasTest;
+
+    constructor(address addr) {
+        gasTest = addr;
+    }
+
+    function callGasTest() public {
+        bytes memory bt = abi.encodeWithSignature("incr()");
+        (bool success, bytes memory data) = gasTest.call{gas:28000}(bt);
+
+        if (!success) {
+            revert("gas not enough");
+        }
+    }
+}
