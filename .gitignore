@@ -1,4 +1,5 @@
 .states
+.deps
 /artifacts/
 /.states/
 /*/artifacts/
